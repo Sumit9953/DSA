@@ -18,50 +18,41 @@ void print(Node *head){
         cout<<curr->data<<" ";
         curr = curr->next;
     }
-    cout<<endl;
 }
 
-Node *Delete(Node *head){
-    if(head == NULL){
-        return NULL;
-    }else{
-        Node *temp = head->next;
-        delete(head);
+Node *insertAt(Node *head,int pos,int data){
+    Node *newNode = new Node(data);
+    int count = 0;
+    Node *temp = head;
+    if(pos == 1){
+        temp->next = head;
         return temp;
     }
-}
-
-Node *lastnode(Node *head){
-    if(head == NULL){
-        return NULL;
-    }
-    if(head->next == NULL){
-        delete(head);
-        return NULL;
-    }
-    Node *curr = head;
-    while (curr->next->next != NULL)
+    while (temp != NULL && count< pos-2)
     {
-        curr = curr->next;
+        temp = temp->next;
+        count++;
     }
-    delete(curr->next);
-    curr->next = NULL;
+    if(temp == NULL){
+        return head;
+    }
+    if(temp != NULL){
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
     return head;
 }
 
 int main(){
-    Node *head  = new Node(10);
+    Node *head = new Node(10);
     Node *temp1 = new Node(20);
     Node *temp2 = new Node(30);
     Node *temp3 = new Node(40);
     Node *temp4 = new Node(50);
-    head->next  = temp1;
+    head->next = temp1;
     temp1->next = temp2;
     temp2->next = temp3;
     temp3->next = temp4;
-    print(head);
-    head = Delete(head);
-    print(head);
-    head = lastnode(head);
+    head = insertAt(head,6,90);
     print(head);
 }
