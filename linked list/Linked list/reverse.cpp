@@ -20,29 +20,26 @@ void print(Node *head){
     }
 }
 
-Node *insertAt(Node *head,int pos,int data){
-    Node *newNode = new Node(data);
-    int count = 0;
-    Node *temp = head;
-    if(pos == 1){
-        temp->next = head;
-        return temp;
+void reprint(Node *head){
+    if(head == NULL){
+        return;
     }
-    while (temp != NULL && count< pos-2)
-    {
-        temp = temp->next;
-        count++;
-    }
-    if(temp == NULL){
-        return head;
-    }
-    if(temp != NULL){
-        newNode->next = temp->next;
-        temp->next = newNode;
-    }
-    return head;
+    cout<<head->data<<" ";
+    reprint(head->next);
 }
-// https://mega.nz/folder/5vBQSCoT#E1YdtoFvqJIgq3L__3XE_Q
+
+Node *reverse(Node *head){
+    Node *curr = head;
+    Node *prve = NULL;
+    while (curr != NULL)
+    {
+        Node *temp = curr->next;
+        curr->next = prve;
+        prve = curr;
+        curr = temp;
+    }
+    return prve;
+}
 
 int main(){
     Node *head = new Node(10);
@@ -54,6 +51,8 @@ int main(){
     temp1->next = temp2;
     temp2->next = temp3;
     temp3->next = temp4;
-    head = insertAt(head,6,90);
-    print(head);
+    reprint(head);
+    cout<<endl;
+    head = reverse(head);
+    reprint(head);
 }
