@@ -12,7 +12,7 @@ void Pair(int *arr,int n){
      }
     maxSum = max(maxSum,currSum);
    }
-   cout<<maxSum<<" ";
+   cout<<maxSum<<" "<<endl;
 }
 
 
