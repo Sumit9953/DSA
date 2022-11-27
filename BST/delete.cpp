@@ -53,4 +53,5 @@ int main(){
    root->right->left = new Node(12);
    root->right->right = new Node(18);
    Delete(root, 15);
+   return 0:
 }
