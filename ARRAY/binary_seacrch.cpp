@@ -36,5 +36,6 @@ int main(){
     cin>>key;
     
     cout<<binary(arr,n,key)<<endl;
+    return 0;
 
 }
