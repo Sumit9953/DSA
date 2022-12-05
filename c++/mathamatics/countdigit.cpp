@@ -14,5 +14,6 @@ int countdigit(long n){
 int main(){
     int n;
     cin>>n;
+    //print
     cout<<countdigit(n);
 }
