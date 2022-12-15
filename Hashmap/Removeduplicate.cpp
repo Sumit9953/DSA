@@ -25,5 +25,5 @@ int main()
     for(int x:out){
         cout<<x<<" ";
     }
-
+    return 0;
 }
