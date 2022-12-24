@@ -39,5 +39,6 @@ int main(){
     }
     findduplicate(arr,n);
 
+    return 0
 
 }
