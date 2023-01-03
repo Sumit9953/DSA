@@ -21,4 +21,5 @@ int main(){
     cin>>n;
     fillarray(arr,0,n,1);
     print(arr,n);
+    return 0;
 }
