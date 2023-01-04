@@ -43,6 +43,7 @@ int main(){
     addedje(adj,3,4);
     addedje(adj,4,5);
     addedje(adj,5,6);
+    
     BFS(adj,7);
     return 0;
 }
