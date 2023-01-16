@@ -26,7 +26,7 @@ int Minimumcoin(int *arr,int n,int val){
 
 
 int main(){
- int arr[] = {3,4,1};
- cout<<Minimumcoin(arr,3,5);
+ int arr[] = {3,4,1,7};
+ cout<<Minimumcoin(arr,4,5);
  return 0;
 }
