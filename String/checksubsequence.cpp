@@ -21,4 +21,5 @@ int main(){
  string s = "geekforgees";
  string s2 = "grkges";
  cout<<subseq(s,s2);
+    return 0;
 }
