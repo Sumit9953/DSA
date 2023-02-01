@@ -19,11 +19,11 @@ vector<int> removeduplicate(int *arr,int size){
 
 int main()
 {
-    int arr[] = {1,2,3,2,1,5};
+    int arr[] = {1,2,3,8,1,5};
     vector<int> out;
     out = removeduplicate(arr,6);
     for(int x:out){
         cout<<x<<" ";
     }
-
+    return 0;
 }

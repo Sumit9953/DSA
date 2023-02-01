@@ -32,9 +32,10 @@ int main(){
     {
         cin>>arr[i];
     }
-    cout<<"Enter Key to be search"<<endl;
+    cout<<"Enter Key to be search ?"<<endl;
     cin>>key;
     
     cout<<binary(arr,n,key)<<endl;
+    return 0;
 
 }

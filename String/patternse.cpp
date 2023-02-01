@@ -26,4 +26,5 @@ int main(){
     string s2 = "abcd";
     cout<<endl;
     cout<<pattern(s1,s2)<<endl;
+    return 0;
 }

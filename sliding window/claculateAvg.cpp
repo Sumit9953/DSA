@@ -28,5 +28,5 @@ int main(){
     for(double k : result){
         cout<<k<<" ";
     }
-    
+    return 0;
 }
