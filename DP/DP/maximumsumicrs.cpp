@@ -25,4 +25,5 @@ int Lis(int *arr,int n){
 int main(){
     int arr[] = {3,20,4,6,7,30};
     cout<<Lis(arr,6);
+    return 0;
 }
