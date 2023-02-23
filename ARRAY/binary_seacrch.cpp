@@ -24,7 +24,7 @@ int binary(int a[],int n,int key){
 
 
 int main(){
-    int arr[1000];
+    int arr[100];
     int n,key;
     cin>>n;
 
