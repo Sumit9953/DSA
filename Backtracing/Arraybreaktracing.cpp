@@ -16,7 +16,7 @@ void fillarray(int *arr,int i,int n,int val){
 }
 
 int main(){
-    int arr[100] = {0};
+    int arr[1000] = {0};
     int n;
     cin>>n;
     fillarray(arr,0,n,1);
